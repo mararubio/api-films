@@ -36,7 +36,7 @@ server.use(express.json()); // Lo necesito para req.body.
 
 
 //Middleware login
-server.post("/", async (req,res) => {
+server.post("/login", async (req,res) => {
     let { user,password } = req.body; 
     if(!user || !password){
         return res.status(400).json({ error: "Usuario y contraseña requeridos" });
